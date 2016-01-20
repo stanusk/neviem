@@ -1,0 +1,10 @@
+
+<h3>Cigarettes:</h3>
+<ul>
+    <li ng-repeat="cig in vm.cigs">
+        <p>{{ cig.timeStamp | date }}</p>
+        <p>{{ cig.status }}</p>
+        <p>{{ cig.location }}</p>
+        <p>{{ cig.mode }}</p>
+    </li>
+</ul>

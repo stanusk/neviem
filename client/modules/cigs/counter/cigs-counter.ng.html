@@ -1,0 +1,32 @@
+
+<div class="container-cigs">
+    <p>Cigarettes smoked: {{ vm.count }}</p>
+
+    <label>
+        status
+        <!--<input type="text" ng-model="vm.newCig.status">-->
+        <select name="status"
+                ng-model="vm.newCig.status"
+                ng-options="status.value as status.value for status in vm.status"
+        ></select>
+    </label>
+    <label>
+        location
+        <!--<input type="text" ng-model="vm.newCig.location">-->
+        <select name="location"
+                ng-model="vm.newCig.location"
+                ng-options="location.value as location.value for location in vm.location"
+        ></select>
+    </label>
+    <label>
+        mode
+        <!--<input type="text" ng-model="vm.newCig.mode">-->
+        <select name="mode"
+                ng-model="vm.newCig.mode"
+                ng-options="mode.value as mode.value for mode in vm.mode"
+                multiple="multiple"
+        ></select>
+    </label>
+
+    <button ng-click="vm.addCig()">Another</button>
+</div>
